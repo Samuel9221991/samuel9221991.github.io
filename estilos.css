@@ -1,0 +1,108 @@
+
+@keyframes escribir {
+    from { 
+        width: 100%;
+    }
+    70% {
+        width: 0;
+    }
+    99% {
+        width: 0;
+    }
+    to { 
+        width: 100%;
+        
+    } 
+}
+@keyframes parpadeo {
+    50% {
+      color: transparent;
+    }
+}
+
+@keyframes color {
+    0% {
+        color: #FFCD00;
+    }
+
+    50% {
+        color: #FF8700;
+    }
+
+    100% {
+        color: #FFCD00;
+    }
+}
+
+
+body {
+    background: #343434;
+}
+
+
+#titulo {
+    background: #2D2D2D;
+    border-radius: 10px;
+    padding: 15px;
+	margin: auto;
+    height: auto;
+    display: table;
+}
+
+#consola {
+    background: black;
+    font-family: "Courier New";
+    border-radius: 8px;
+    padding: 1px 31px 1px 10px;
+    /*   ar der ab iz*/
+}
+
+
+.titulo_escribir { 
+	position: relative;
+    color: white;
+}
+
+.titulo_escribir .nu_c {
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: black;
+    border-radius: 8px;
+    color: #196F3D;
+    font-weight: bold;
+    animation: escribir 2s steps(15) 1s both, parpadeo 1s steps(1) infinite;
+}
+
+#rayita_oculta {
+    background: black;
+    border-radius: 8px;
+    color: #196F3D;
+    font-weight: bold;
+    animation: parpadeo 1s steps(1) infinite;
+}
+
+.terminal_usuario {
+    color: #196F3D;
+}
+.terminal_puntitos {
+    color: #E4E4E4;
+}
+.terminal_ubicacion {
+    color: rgb(28, 95, 219);
+}
+.terminal_simbolo {
+    color: #E4E4E4;
+}
+
+/*Estilos de JS*/
+.cambio_puntero {
+    position: unset !important;
+    width: 100% !important;
+    height: auto !important; 
+    animation: color 2s steps(60) infinite !important;
+}
+
+.agrandar_consola {
+    border-radius: 10px !important;
+}
