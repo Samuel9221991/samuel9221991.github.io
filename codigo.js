@@ -1,15 +1,43 @@
-let puntero = document.getElementById('rayita');
-let consola = document.getElementById('consola');
-let todo = document.getElementById('texto');
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="estilos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a108a2404c.js" crossorigin="anonymous"></script>
+    <title>samuel9221991 | Inicio</title>
+</head>
+<body>
+    <header>
+        <div id="sobre-mi" class="boton">
+            <p><i class="fa-solid fa-folders"></i>Acerca de mi</p>
+        </div>
+        <div id="mini_consola">
+            <p id="todo_consola_menu"><span class="terminal_usuario">user@web</span><span class="terminal_puntitos">:</span><span class="terminal_ubicacion">~</span>
+            <span class="terminal_simbolo">$</span>
+            <span id="texto_consola">cd inicio<span id="rayita_menu">_</span></span></p>
+        </div>
+        <div id="portafolio" class="boton">
+            <p><i class="fa-solid fa-folders"></i>Mi portafolio</p>
+        </div>
+        <div id="contactame" class="boton">
+            <p><i class="fa-solid fa-folders"></i>Contáctame</p>
+        </div>
+    </header>
 
-var i = 1;
-
-setTimeout(() => {
-    var puntero_estilos = window.getComputedStyle(puntero);
-    var puntero_valor = puntero_estilos.getPropertyValue('width');
-    console.log(`${puntero_valor} i: ${i}`);
-    puntero.innerHTML = "<br>LENGUAJES:<br><br> [1] Python<br> [2] Arduino (C)<br> [3] C#<br> [4] JavaScript<br> [5] PHP<br> [6] CSS<br> [7] HTML<br>";
-    puntero.className = "cambio_puntero";
-    consola.className += "agrandar_consola";
-    todo.innerHTML += " <span class='terminal_usuario'>user@web</span><span class='terminal_puntitos'>:</span><span class='terminal_ubicacion'>~/inicio</span><span class='terminal_simbolo'>$</span> <span id='rayita_oculta'>_</span>"
-} , 3000);
+    <main id="principal">
+        <div id="titulo">
+            <div id="consola">
+                <h1 id="texto">
+                    <span class="terminal_usuario">user@web</span><span class="terminal_puntitos">:</span><span class="terminal_ubicacion">~/inicio</span>
+                    <span class="terminal_simbolo">$</span>
+                    <span class="titulo_escribir">./samuel9221991.sh<span id="rayita" class="nu_c">_</span></span>
+                </h1>
+            </div>
+        </div>
+    </main>
+<script src="langs.js"></script>
+<script src="pagina.js"></script>
+</body>
+</html>
